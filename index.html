@@ -589,4 +589,1974 @@
         border-radius: 50%;
         background: rgba(14, 23, 25, 0.85);
         display: grid;
-        
+        place-items: center;
+      }
+      .rnd svg {
+        width: 21px;
+        height: 21px;
+        stroke: var(--text);
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .dhead {
+        padding: 18px 20px 0;
+      }
+      .dhead .cat {
+        font-size: 11.5px;
+        font-weight: 700;
+        color: var(--green);
+        letter-spacing: 0.05em;
+        display: block;
+        margin-bottom: 9px;
+      }
+      .dhead h1 {
+        font-size: 27px;
+        margin-bottom: 8px;
+      }
+      .dhead .by {
+        font-size: 14px;
+        color: var(--text-2);
+        margin-bottom: 14px;
+      }
+      .statrow {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--line);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 20px;
+      }
+      .statrow div {
+        background: var(--base);
+        padding: 13px 16px;
+      }
+      .statrow dt {
+        font-size: 11px;
+        color: var(--text-2);
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+      .statrow dd {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 800;
+      }
+
+      /* Outcomes */
+      .out {
+        padding: 0 20px;
+      }
+      .out div {
+        display: flex;
+        gap: 11px;
+        padding: 11px 0;
+        border-top: 1px solid var(--line);
+      }
+      .out div:first-child {
+        border-top: 0;
+      }
+      .out .tick {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--green-soft);
+        flex: none;
+        display: grid;
+        place-items: center;
+        margin-top: 1px;
+      }
+      .out .tick::after {
+        content: "";
+        width: 8px;
+        height: 4px;
+        border-left: 2px solid var(--green);
+        border-bottom: 2px solid var(--green);
+        transform: rotate(-45deg) translate(1px, -2px);
+      }
+      .out span {
+        font-size: 14.5px;
+        line-height: 1.5;
+      }
+
+      /* Enroll */
+      .pace {
+        padding: 0 20px;
+      }
+      .paceopt {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 0;
+        border-top: 1px solid var(--line);
+        width: 100%;
+      }
+      .paceopt .l b {
+        font-size: 15.5px;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 3px;
+      }
+      .paceopt .l span {
+        font-size: 12.5px;
+        color: var(--text-2);
+      }
+      .radio {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1.5px solid var(--line);
+        flex: none;
+      }
+      .radio[data-on="true"] {
+        border-color: var(--green);
+        border-width: 7px;
+      }
+      .finish {
+        margin: 18px 20px 0;
+        background: var(--green-soft);
+        border: 1px solid rgba(61, 220, 151, 0.3);
+        border-radius: var(--r-md);
+        padding: 15px;
+      }
+      .finish b {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--green);
+        margin-bottom: 5px;
+      }
+      .finish h3 {
+        font-size: 19px;
+        margin-bottom: 5px;
+      }
+      .finish p {
+        margin: 0;
+        font-size: 13.5px;
+        color: var(--text-2);
+        line-height: 1.5;
+      }
+
+      /* Reading view, the focus mode */
+      .reader {
+        min-height: 100%;
+        background: var(--page);
+        color: var(--page-ink);
+        display: flex;
+        flex-direction: column;
+      }
+      .rtop {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        padding: 16px 20px 12px;
+        flex: none;
+      }
+      .rtop .x {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: rgba(27, 26, 23, 0.07);
+        display: grid;
+        place-items: center;
+        flex: none;
+      }
+      .rtop .x svg {
+        width: 18px;
+        height: 18px;
+        stroke: var(--page-ink);
+        fill: none;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+      }
+      .rtop .meter {
+        flex: 1;
+      }
+      .rtop .meter i {
+        display: block;
+        height: 4px;
+        background: rgba(27, 26, 23, 0.12);
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .rtop .meter i b {
+        display: block;
+        height: 100%;
+        background: var(--page-ink);
+        border-radius: 2px;
+      }
+      .rtop .meter span {
+        font-size: 11px;
+        font-weight: 700;
+        color: rgba(27, 26, 23, 0.55);
+        display: block;
+        margin-top: 6px;
+      }
+      .rbody {
+        padding: 10px 26px 0;
+        flex: 1;
+      }
+      .rbody .kind {
+        font-size: 11.5px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: rgba(27, 26, 23, 0.5);
+        margin-bottom: 10px;
+        font-family: var(--f-ui);
+      }
+      .rbody h1 {
+        font-family: var(--f-read);
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 1.2;
+        margin-bottom: 18px;
+        letter-spacing: -0.01em;
+        color: var(--page-ink);
+      }
+      .rbody p {
+        font-family: var(--f-read);
+        font-size: 17px;
+        line-height: 1.68;
+        margin: 0 0 17px;
+        color: #2a2823;
+      }
+      .rbody .callout {
+        background: rgba(27, 26, 23, 0.05);
+        border-left: 3px solid var(--page-ink);
+        padding: 13px 15px;
+        margin: 0 0 18px;
+        border-radius: 0 8px 8px 0;
+      }
+      .rbody .callout p {
+        margin: 0;
+        font-size: 15.5px;
+      }
+      .rbody code {
+        font-family: ui-monospace, Menlo, monospace;
+        font-size: 14.5px;
+        background: rgba(27, 26, 23, 0.07);
+        padding: 2px 6px;
+        border-radius: 5px;
+      }
+      .rfoot {
+        padding: 8px 26px 26px;
+      }
+      .rfoot .btn {
+        background: var(--page-ink);
+        color: var(--page);
+      }
+      .rfoot .btn.ghost {
+        background: rgba(27, 26, 23, 0.07);
+        color: var(--page-ink);
+      }
+
+      /* Check */
+      .check {
+        background: rgba(27, 26, 23, 0.05);
+        border-radius: var(--r-md);
+        padding: 18px;
+        margin-bottom: 18px;
+      }
+      .check .lab {
+        font-size: 11.5px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: rgba(27, 26, 23, 0.5);
+        margin-bottom: 8px;
+        font-family: var(--f-ui);
+      }
+      .check h3 {
+        font-family: var(--f-read);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.35;
+        margin-bottom: 14px;
+        color: var(--page-ink);
+      }
+      .check button {
+        display: flex;
+        gap: 11px;
+        align-items: flex-start;
+        width: 100%;
+        padding: 12px 13px;
+        border-radius: 10px;
+        background: var(--page);
+        border: 1px solid rgba(27, 26, 23, 0.14);
+        margin-bottom: 8px;
+        font-size: 14.5px;
+        line-height: 1.4;
+      }
+      .check button[data-state="right"] {
+        border-color: #1e7a52;
+        background: rgba(30, 122, 82, 0.1);
+      }
+      .check button[data-state="wrong"] {
+        border-color: #b4462f;
+        background: rgba(180, 70, 47, 0.08);
+      }
+      .check .verdict {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 12px 0 0;
+        font-family: var(--f-read);
+      }
+
+      /* Progress */
+      .skillcard {
+        margin: 0 20px 12px;
+        background: var(--surface);
+        border-radius: var(--r-md);
+        padding: 15px;
+        width: calc(100% - 40px);
+      }
+      .skillcard .r1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 12px;
+      }
+      .skillcard b {
+        font-size: 15.5px;
+        font-weight: 700;
+      }
+      .skillcard .n {
+        font-size: 12.5px;
+        color: var(--text-2);
+        font-weight: 600;
+      }
+      .skill {
+        display: flex;
+        gap: 11px;
+        align-items: center;
+        padding: 9px 0;
+        border-top: 1px solid var(--line);
+      }
+      .skill .pip {
+        width: 18px;
+        height: 18px;
+        border-radius: 5px;
+        border: 1.5px solid var(--line);
+        flex: none;
+        display: grid;
+        place-items: center;
+      }
+      .skill .pip[data-on="true"] {
+        background: var(--green);
+        border-color: var(--green);
+      }
+      .skill .pip[data-on="true"]::after {
+        content: "";
+        width: 8px;
+        height: 4px;
+        border-left: 2px solid #06221a;
+        border-bottom: 2px solid #06221a;
+        transform: rotate(-45deg) translate(1px, -2px);
+      }
+      .skill span {
+        font-size: 14px;
+        flex: 1;
+      }
+      .skill em {
+        font-style: normal;
+        font-size: 11.5px;
+        color: var(--text-2);
+        font-weight: 600;
+      }
+      .weeks {
+        display: flex;
+        gap: 7px;
+        align-items: flex-end;
+        padding: 0 20px;
+        height: 112px;
+      }
+      .weeks div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+      }
+      .weeks i {
+        display: block;
+        width: 100%;
+        border-radius: 5px;
+        background: var(--surface-2);
+      }
+      .weeks i.on {
+        background: var(--green);
+      }
+      .weeks b {
+        font-size: 10.5px;
+        color: var(--text-2);
+        font-weight: 600;
+        text-align: center;
+        margin-top: 6px;
+      }
+      .bigstats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 0 20px;
+      }
+      .bigstats div {
+        background: var(--surface);
+        border-radius: var(--r-md);
+        padding: 14px 12px;
+        text-align: center;
+      }
+      .bigstats dt {
+        font-size: 11px;
+        color: var(--text-2);
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      .bigstats dd {
+        margin: 0;
+        font-size: 23px;
+        font-weight: 800;
+      }
+
+      .empty {
+        padding: 60px 30px;
+        text-align: center;
+        color: var(--text-2);
+      }
+      .empty h3 {
+        font-size: 19px;
+        color: var(--text);
+        margin-bottom: 6px;
+      }
+      .empty p {
+        font-size: 14.5px;
+        line-height: 1.55;
+        margin: 0 0 18px;
+      }
+
+      /* Tab bar */
+      .tabs {
+        flex: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1px solid var(--line);
+        background: var(--base);
+        padding: 8px 4px 18px;
+      }
+      .tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        padding: 6px 0;
+        color: var(--text-2);
+        font-size: 11px;
+        font-weight: 600;
+        min-height: 44px;
+        text-align: center;
+      }
+      .tab svg {
+        width: 22px;
+        height: 22px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .tab[aria-selected="true"] {
+        color: var(--green);
+      }
+
+      .toast {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 96px;
+        background: var(--text);
+        color: var(--base);
+        font-size: 13.5px;
+        font-weight: 700;
+        padding: 11px 18px;
+        border-radius: var(--r-full);
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
+        z-index: 40;
+        white-space: nowrap;
+      }
+      .toast.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-6px);
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .view > * {
+        animation: fade 0.16s ease-out;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.001ms !important;
+          transition-duration: 0.001ms !important;
+        }
+      }
+      @media (max-width: 900px) {
+        .wrap {
+          grid-template-columns: 1fr;
+          justify-items: center;
+        }
+        .phone {
+          position: relative;
+          top: 0;
+          width: 100%;
+          max-width: 390px;
+          height: min(800px, 86vh);
+        }
+        .doc {
+          max-width: 560px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="phone" role="application" aria-label="Cohort prototype">
+        <div class="status"><span>9:41</span><span>▮▮▮</span></div>
+        <div class="view" id="view"></div>
+        <nav class="tabs" id="tabs" role="tablist" aria-label="Main"></nav>
+        <div class="toast" id="toast" role="status"></div>
+      </div>
+
+      <div class="doc">
+        <p class="kicker">Task 7: e-learning platform</p>
+        <h1>Cohort</h1>
+        <p>
+          The completion issue of online courses is not about discovering but
+          about stopping. Individuals sign up for courses but leave them
+          unfinished. Thus, the two real issues of the brief, the need to keep
+          students involved and offering them some system of tracking progress,
+          become one solution.
+        </p>
+
+        <h2>Enrolment asks for a pace, not just a payment</h2>
+        <p>
+          The enrolment page requests the user to input the number of hours they
+          are able to dedicate to learning. If the user inputs the number 90
+          minutes, then the app registers that the course will end on November
+          12, thereby completing the first step of turning an abstract idea into
+          something more concrete. From that moment on, all the following
+          screens will have something to measure against. Each lesson is based
+          on the selected number of hours
+        </p>
+
+        <h2>Progress is what you can do, not what you watched</h2>
+        <p>
+          The program measures how long the user has managed to attend all the
+          classes by showing a percentage bar. Each course consists of a few
+          practical skills, and a skill is considered to be passed only when the
+          user has shown the required results on a final exam. Four out of the
+          seven skills can be said to be “presentable”, meaning that the
+          candidate can name them in an interview. However, a 62 percent success
+          only means that there are still things to learn.
+        </p>
+
+        <h2>Home is resume first, sized to the time you have</h2>
+        <p>
+          The top of the home screen is the lesson you left off with, along with
+          information about being either on pace or falling behind. Below is
+          something no one ever asks learners: How much time do you have at this
+          moment? Ten minutes means a very different set of lessons from
+          forty-five. Most drops happen as soon as a learner opens the app and
+          realizes that they do not know what lesson is appropriate.
+        </p>
+
+        <h2>Focus mode</h2>
+        <p>
+          The lesson player is the only screen that uses warm colors instead of
+          bright paper, with no tab bar and just the lesson on it with a
+          progress bar. Long reading on dark backgrounds can be exhausting for
+          the user, and changing the color scheme shows that the user is in a
+          new mode, in which they no longer browse.
+        </p>
+
+        <h2>User flow</h2>
+        <div class="flow">
+          <span class="node entry">Home</span><span class="arrow">→</span
+          ><span class="node">Continue</span><span class="arrow">→</span
+          ><span class="node">Lesson</span><span class="arrow">→</span
+          ><span class="node">Check</span><span class="arrow">→</span
+          ><span class="node">Skill marked</span>
+        </div>
+        <div class="flow">
+          <span class="node entry">Browse</span><span class="arrow">→</span
+          ><span class="node">Course</span><span class="arrow">→</span
+          ><span class="node">Set pace</span><span class="arrow">→</span
+          ><span class="node">Enrolled</span><span class="arrow">→</span
+          ><span class="node">First lesson</span>
+        </div>
+        <div class="flow">
+          <span class="node entry">Home</span><span class="arrow">→</span
+          ><span class="node">Time I have</span><span class="arrow">→</span
+          ><span class="node">Lesson that fits</span>
+        </div>
+        <div class="flow">
+          <span class="node entry">Progress</span><span class="arrow">→</span
+          ><span class="node">Skills</span><span class="arrow">→</span
+          ><span class="node">Course</span><span class="arrow">→</span
+          ><span class="node">Next lesson</span>
+        </div>
+
+        <h2>Colour</h2>
+        <div class="tok">
+          <div class="sw">
+            <i style="background: #0e1719"></i><b>Base</b><br /><span
+              >#0E1719</span
+            >
+          </div>
+          <div class="sw">
+            <i style="background: #172123"></i><b>Surface</b><br /><span
+              >#172123</span
+            >
+          </div>
+          <div class="sw">
+            <i style="background: #e9f1ef"></i><b>Text</b><br /><span
+              >#E9F1EF</span
+            >
+          </div>
+          <div class="sw">
+            <i style="background: #3ddc97"></i><b>Green</b><br /><span
+              >#3DDC97 action, on pace</span
+            >
+          </div>
+          <div class="sw">
+            <i style="background: #f2b33d"></i><b>Amber</b><br /><span
+              >#F2B33D behind pace</span
+            >
+          </div>
+          <div class="sw">
+            <i style="background: #f7f3ea"></i><b>Page</b><br /><span
+              >#F7F3EA reading only</span
+            >
+          </div>
+        </div>
+        <p>
+          <strong>The rule:</strong> green is both the action colour and the on
+          pace colour, which is deliberate, since the action always is the thing
+          that gets you back on pace. Amber appears only when you are behind.
+          Warm paper appears only inside a lesson, nowhere else, so the mode
+          switch is unmistakable.
+        </p>
+
+        <h2>Type</h2>
+        <ul>
+          <li>
+            <strong>Plus Jakarta Sans</strong> 400 to 800 for the whole
+            interface.
+          </li>
+          <li>
+            <strong>Literata</strong> for lesson text only. It was drawn for
+            long reading on screens, and reserving it for the reading view means
+            the serif itself signals you are learning rather than browsing.
+          </li>
+          <li>
+            Scale: 27 for titles, 21, 18, 17 for lesson body, 15, 14.5, 12.5,
+            11.5.
+          </li>
+        </ul>
+
+        <h2>Frames to build</h2>
+        <ul>
+          <li>
+            <strong>Home</strong>: on pace and behind pace, since the card
+            changes colour and copy.
+          </li>
+          <li><strong>Home</strong> with a time filter applied.</li>
+          <li>
+            <strong>Browse</strong>: catalogue and a category filtered state.
+          </li>
+          <li><strong>Course detail</strong>: not enrolled and enrolled.</li>
+          <li>
+            <strong>Enrol</strong>: pace picker with the projected finish date.
+          </li>
+          <li>
+            <strong>Lesson</strong>: reading, then the check answered right and
+            answered wrong.
+          </li>
+          <li>
+            <strong>Progress</strong>: skills, weekly minutes, and the empty
+            state for a new learner.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      /* Data */
+      const TODAY = "Tue 22 Sep";
+      const CATS = [
+        "Data",
+        "Design",
+        "Business",
+        "Engineering",
+        "Language",
+        "Creative",
+      ];
+
+      const COURSES = [
+        {
+          id: 1,
+          t: "SQL for people who already use spreadsheets",
+          by: "Wanjiru Mbugua",
+          cat: "Data",
+          level: "Beginner",
+          price: 0,
+          rating: 4.8,
+          learners: "12,400",
+          art: 0,
+          blurb:
+            "You already think in rows, columns and formulas. This course maps what you know onto SQL, then takes you past what a spreadsheet can do.",
+          outcomes: [
+            "Pull and filter data without asking anyone for an export",
+            "Join tables that were never designed to go together",
+            "Write aggregate queries a spreadsheet would choke on",
+          ],
+          skills: [
+            { n: "Reading a query", ls: [1, 2] },
+            { n: "Filtering and sorting", ls: [3, 4] },
+            { n: "Joining tables", ls: [5, 6, 7] },
+            { n: "Aggregating", ls: [8, 9] },
+            { n: "Window functions", ls: [10, 11] },
+          ],
+          lessons: [
+            {
+              id: 1,
+              sec: "Getting oriented",
+              t: "What a database is, in spreadsheet terms",
+              min: 8,
+              kind: "Read",
+              body: [
+                "A spreadsheet holds one grid at a time and you look at all of it at once. A database holds many grids, calls them tables, and shows you nothing until you ask. That difference is the whole adjustment.",
+                "Every table has columns with fixed types and rows that all follow the same shape. A column of dates contains only dates. This rigidity is what lets a database hold fifty million rows and still answer in under a second.",
+                "You never open a table the way you open a sheet. You describe what you want and the database assembles it. The description is the query, and learning to write one is the rest of this course.",
+              ],
+            },
+            {
+              id: 2,
+              sec: "Getting oriented",
+              t: "Reading your first SELECT",
+              min: 11,
+              kind: "Read",
+              check: {
+                q: "Which part of a query decides which rows come back?",
+                a: ["SELECT", "WHERE", "FROM"],
+                right: 1,
+                why: "SELECT chooses columns, FROM chooses the table, and WHERE chooses rows. Mixing up SELECT and WHERE is the single most common beginner slip.",
+              },
+              body: [
+                "A query reads like a sentence with three parts. <code>SELECT</code> names the columns you want back. <code>FROM</code> names the table they live in. <code>WHERE</code> narrows which rows qualify.",
+                "So <code>SELECT name, city FROM customers WHERE city = 'Nairobi'</code> returns two columns, from one table, for the rows that pass one test. Everything else in SQL is elaboration on those three ideas.",
+                "The order you write them is fixed and never changes, even though the database reads them in a different order internally. Write them in the same order every time and the rhythm becomes automatic within a week.",
+              ],
+            },
+            {
+              id: 3,
+              sec: "Narrowing things down",
+              t: "WHERE, and the shapes a filter can take",
+              min: 14,
+              kind: "Read",
+              body: [
+                "A filter is a test applied to every row, one at a time. If the test passes, the row survives. There is no partial credit, which is why a filter that returns nothing usually means your test is stricter than you intended.",
+                "Beyond equals, you have ranges with <code>BETWEEN</code>, membership with <code>IN</code>, pattern matching with <code>LIKE</code>, and the awkward one, <code>IS NULL</code>, which exists because a missing value is not equal to anything, including itself.",
+                "That last point catches everyone once. A row where city is missing will not appear in results for <code>city = 'Nairobi'</code> or for <code>city != 'Nairobi'</code>. It is absent from both, because the database refuses to guess.",
+              ],
+            },
+            {
+              id: 4,
+              sec: "Narrowing things down",
+              t: "Sorting, limiting and the cost of both",
+              min: 9,
+              kind: "Exercise",
+              check: {
+                q: "Why can ORDER BY be expensive on a large table?",
+                a: [
+                  "It rewrites the table on disk",
+                  "It has to see every qualifying row before returning the first one",
+                  "It creates a copy of every column",
+                ],
+                right: 1,
+                why: "Sorting cannot begin until the full set of matching rows is known, so it waits for the filter to finish. On a filtered result this is cheap. On the whole table it is not.",
+              },
+              body: [
+                "<code>ORDER BY</code> arranges what came back, and <code>LIMIT</code> cuts it short. Together they answer most of the questions people actually bring to data: the top ten, the most recent, the biggest.",
+                "The order matters more than it looks. The database filters first, sorts what survives, then takes your limit from the top. Asking for the top ten from a well filtered set is fast. Asking for it from twenty million unfiltered rows is not.",
+                "Get into the habit of filtering before you sort, even when you are exploring. It costs you nothing and saves you from queries that hang.",
+              ],
+            },
+            {
+              id: 5,
+              sec: "Putting tables together",
+              t: "Why data lives in more than one table",
+              min: 12,
+              kind: "Read",
+              body: [
+                "A spreadsheet repeats a customer's name on every one of their orders. A database stores the name once, gives that row an id, and every order refers to the id. Change the name once and every order is correct.",
+                "This is the reason your data is split across tables that each look incomplete on their own. Nothing is missing. It is waiting to be reconnected at the moment you ask.",
+                "Joining is that reconnection. It is not an advanced topic, it is the normal condition of working with real data, and it is where spreadsheet habits fall away fastest.",
+              ],
+            },
+            {
+              id: 6,
+              sec: "Putting tables together",
+              t: "INNER and LEFT, and which one you want",
+              min: 16,
+              kind: "Read",
+              body: [
+                "An inner join keeps only rows that matched on both sides. A left join keeps everything from the left table and fills blanks where the right side had nothing.",
+                "The choice is a question about your question. Counting orders? Inner join is fine. Counting customers, including those who have never ordered? You need a left join, or your answer quietly excludes the people you were asking about.",
+                "Most wrong numbers in reporting come from an inner join used where a left join belonged. The query runs, the result looks reasonable, and a whole category of rows is simply absent.",
+              ],
+            },
+            {
+              id: 7,
+              sec: "Putting tables together",
+              t: "Joining three tables without losing track",
+              min: 13,
+              kind: "Exercise",
+              check: {
+                q: "You left join customers to orders and get more rows than you have customers. What happened?",
+                a: [
+                  "The join is broken",
+                  "Some customers have several orders",
+                  "Duplicate customer records",
+                ],
+                right: 1,
+                why: "A join multiplies rows wherever one row on the left matches several on the right. Row count going up is normal and expected. It only becomes a problem when you then sum a column from the left table.",
+              },
+              body: [
+                "Three tables are two joins, applied one after the other. The result of the first join becomes the left side of the second. Read it top to bottom and the complexity stops being frightening.",
+                "Alias every table with a short name and put that name in front of every column. It feels fussy for two tables and saves you at four, when two tables both have a column called <code>id</code>.",
+                "Check your row count after each join while you build. If it jumps unexpectedly, you have found a duplicate relationship, and finding it now is much cheaper than finding it in a finished report.",
+              ],
+            },
+            {
+              id: 8,
+              sec: "Summarising",
+              t: "GROUP BY as a pivot table",
+              min: 12,
+              kind: "Read",
+              body: [
+                "A pivot table drags a field into rows and a number into values. <code>GROUP BY</code> is the same move written down. The grouped column becomes your rows, and the aggregate becomes your values.",
+                "The rule that trips people is that every column in your SELECT must either be grouped or aggregated. The database will not guess which of fifty city values to show for a group of fifty rows.",
+                "Once that clicks, most reporting questions become one short query. Revenue by month, orders by region, average basket by channel: all the same shape, with different columns.",
+              ],
+            },
+            {
+              id: 9,
+              sec: "Summarising",
+              t: "HAVING, and filtering after the fact",
+              min: 10,
+              kind: "Exercise",
+              check: {
+                q: "You want regions with more than 100 orders. Where does that test belong?",
+                a: ["WHERE", "HAVING", "ORDER BY"],
+                right: 1,
+                why: "WHERE filters individual rows before grouping. Your test is about the group's total, which does not exist until grouping has happened, so it belongs in HAVING.",
+              },
+              body: [
+                "<code>WHERE</code> runs before grouping and tests one row at a time. <code>HAVING</code> runs after and tests the group. They look interchangeable and are not.",
+                "Use both in the same query without hesitation. Filter rows down to this year with WHERE, group by region, then keep only the busy regions with HAVING.",
+                "If you find yourself wanting to filter on a count or a sum, that is the signal. Counts do not exist until the grouping is done.",
+              ],
+            },
+            {
+              id: 10,
+              sec: "Going further",
+              t: "Window functions, the thing spreadsheets cannot do",
+              min: 18,
+              kind: "Read",
+              body: [
+                "A window function calculates across a set of rows while keeping every row in the result. Aggregation collapses ten rows into one. A window function leaves you all ten, each carrying the answer.",
+                "That is how you get a running total, a rank within a category, or each row compared against its own group's average, in one pass. In a spreadsheet you would need a helper column and a lookup.",
+                "The syntax is a normal function followed by <code>OVER (...)</code>, and inside those brackets you say what the window is. <code>PARTITION BY</code> splits it into groups and <code>ORDER BY</code> arranges it inside each group.",
+              ],
+            },
+            {
+              id: 11,
+              sec: "Going further",
+              t: "Ranking, running totals and month on month",
+              min: 15,
+              kind: "Exercise",
+              check: {
+                q: "What does PARTITION BY do inside a window function?",
+                a: [
+                  "Filters rows out of the result",
+                  "Splits rows into groups the function restarts for",
+                  "Sorts the final output",
+                ],
+                right: 1,
+                why: "PARTITION BY divides rows into independent groups. A running total with PARTITION BY region restarts at zero for each region instead of carrying across all of them.",
+              },
+              body: [
+                "Three patterns cover most real requests. <code>ROW_NUMBER()</code> ranks within a group, useful for picking each customer's first order. <code>SUM() OVER (ORDER BY ...)</code> gives a running total. <code>LAG()</code> reaches back a row, which is how month on month change is calculated.",
+                "Each is one line. The difficulty is not the syntax but noticing that a request is a window problem, usually signalled by the words per, within, running, or compared to.",
+                "You now have every piece needed to answer the questions that previously meant asking someone for an export. The rest is practice on data you care about.",
+              ],
+            },
+          ],
+        },
+
+        {
+          id: 2,
+          t: "Design systems from scratch",
+          by: "Peter Oduor",
+          cat: "Design",
+          level: "Intermediate",
+          price: 4500,
+          rating: 4.6,
+          learners: "3,180",
+          art: 1,
+          blurb:
+            "Build a component library that survives contact with a real product team, including the governance part nobody warns you about.",
+          outcomes: [
+            "Define tokens that hold up across themes",
+            "Build components that resist one off exceptions",
+            "Write the rules that keep a system from rotting",
+          ],
+          skills: [
+            { n: "Tokens", ls: [21, 22] },
+            { n: "Components", ls: [23, 24] },
+            { n: "Governance", ls: [25] },
+          ],
+          lessons: [
+            {
+              id: 21,
+              sec: "Foundations",
+              t: "What a token actually is",
+              min: 10,
+              kind: "Read",
+            },
+            {
+              id: 22,
+              sec: "Foundations",
+              t: "Naming that survives a redesign",
+              min: 14,
+              kind: "Read",
+            },
+            {
+              id: 23,
+              sec: "Components",
+              t: "Building the first five",
+              min: 20,
+              kind: "Exercise",
+            },
+            {
+              id: 24,
+              sec: "Components",
+              t: "Variants without combinatorial explosion",
+              min: 17,
+              kind: "Read",
+            },
+            {
+              id: 25,
+              sec: "Keeping it alive",
+              t: "Contribution rules and who says no",
+              min: 12,
+              kind: "Read",
+            },
+          ],
+        },
+
+        {
+          id: 3,
+          t: "Introduction to machine learning",
+          by: "Dr. Asha Kimani",
+          cat: "Data",
+          level: "Intermediate",
+          price: 6000,
+          rating: 4.7,
+          learners: "8,920",
+          art: 2,
+          blurb:
+            "The working half of machine learning: framing a problem, splitting data honestly, and knowing when a model is lying to you.",
+          outcomes: [
+            "Frame a business question as a learning problem",
+            "Split and validate data without leaking",
+            "Read a confusion matrix and act on it",
+          ],
+          skills: [
+            { n: "Framing", ls: [31, 32] },
+            { n: "Validation", ls: [33, 34] },
+            { n: "Evaluation", ls: [35] },
+          ],
+          lessons: [
+            {
+              id: 31,
+              sec: "Framing",
+              t: "Is this even a machine learning problem",
+              min: 13,
+              kind: "Read",
+            },
+            {
+              id: 32,
+              sec: "Framing",
+              t: "Choosing a target you can actually measure",
+              min: 15,
+              kind: "Read",
+            },
+            {
+              id: 33,
+              sec: "Honest data",
+              t: "Train, validation and test",
+              min: 16,
+              kind: "Read",
+            },
+            {
+              id: 34,
+              sec: "Honest data",
+              t: "Leakage, and how it flatters you",
+              min: 18,
+              kind: "Exercise",
+            },
+            {
+              id: 35,
+              sec: "Judging a model",
+              t: "Accuracy is usually the wrong number",
+              min: 14,
+              kind: "Read",
+            },
+          ],
+        },
+
+        {
+          id: 4,
+          t: "Financial modelling in spreadsheets",
+          by: "Faith Njeri",
+          cat: "Business",
+          level: "Beginner",
+          price: 3500,
+          rating: 4.5,
+          learners: "6,410",
+          art: 3,
+          blurb:
+            "Build a three statement model that someone else can open, understand and trust without phoning you.",
+          outcomes: [
+            "Structure a model so assumptions are visible",
+            "Link the three statements correctly",
+            "Stress test without breaking the file",
+          ],
+          skills: [
+            { n: "Structure", ls: [41, 42] },
+            { n: "Linking", ls: [43] },
+            { n: "Scenarios", ls: [44] },
+          ],
+          lessons: [
+            {
+              id: 41,
+              sec: "Setting up",
+              t: "Assumptions live in one place",
+              min: 11,
+              kind: "Read",
+            },
+            {
+              id: 42,
+              sec: "Setting up",
+              t: "Formatting as documentation",
+              min: 9,
+              kind: "Read",
+            },
+            {
+              id: 43,
+              sec: "The model",
+              t: "Making the statements tie",
+              min: 22,
+              kind: "Exercise",
+            },
+            {
+              id: 44,
+              sec: "Pressure",
+              t: "Scenarios without duplicate tabs",
+              min: 16,
+              kind: "Read",
+            },
+          ],
+        },
+
+        {
+          id: 5,
+          t: "Kiswahili for the workplace",
+          by: "Amina Hassan",
+          cat: "Language",
+          level: "Beginner",
+          price: 2000,
+          rating: 4.9,
+          learners: "5,230",
+          art: 4,
+          blurb:
+            "Enough Kiswahili to run a meeting, greet properly, and stop switching to English when it gets difficult.",
+          outcomes: [
+            "Greet and open a meeting with the right register",
+            "Handle numbers, dates and prices",
+            "Follow a conversation at normal speed",
+          ],
+          skills: [
+            { n: "Greetings", ls: [51] },
+            { n: "Numbers", ls: [52] },
+            { n: "Meetings", ls: [53, 54] },
+          ],
+          lessons: [
+            {
+              id: 51,
+              sec: "Basics",
+              t: "Greetings and who you use them with",
+              min: 9,
+              kind: "Read",
+            },
+            {
+              id: 52,
+              sec: "Basics",
+              t: "Numbers, prices and dates",
+              min: 12,
+              kind: "Exercise",
+            },
+            {
+              id: 53,
+              sec: "At work",
+              t: "Opening and closing a meeting",
+              min: 14,
+              kind: "Read",
+            },
+            {
+              id: 54,
+              sec: "At work",
+              t: "Disagreeing politely",
+              min: 11,
+              kind: "Read",
+            },
+          ],
+        },
+
+        {
+          id: 6,
+          t: "Writing that persuades",
+          by: "Njeri wa Kamau",
+          cat: "Business",
+          level: "All levels",
+          price: 0,
+          rating: 4.6,
+          learners: "15,800",
+          art: 5,
+          blurb:
+            "Short course on making a case in writing, for proposals, updates and the email that has to land first time.",
+          outcomes: [
+            "Open with the thing that matters",
+            "Cut a draft by a third without losing it",
+            "Anticipate the objection before it arrives",
+          ],
+          skills: [
+            { n: "Structure", ls: [61, 62] },
+            { n: "Editing", ls: [63] },
+          ],
+          lessons: [
+            {
+              id: 61,
+              sec: "Before writing",
+              t: "What you actually want them to do",
+              min: 8,
+              kind: "Read",
+            },
+            {
+              id: 62,
+              sec: "Drafting",
+              t: "Put the conclusion first",
+              min: 12,
+              kind: "Read",
+            },
+            {
+              id: 63,
+              sec: "Editing",
+              t: "The third you can always cut",
+              min: 10,
+              kind: "Exercise",
+            },
+          ],
+        },
+
+        {
+          id: 7,
+          t: "Kubernetes without the folklore",
+          by: "Brian Otieno",
+          cat: "Engineering",
+          level: "Advanced",
+          price: 7500,
+          rating: 4.4,
+          learners: "2,640",
+          art: 6,
+          blurb:
+            "What the objects actually do, why your pod is pending, and how to debug a cluster you did not build.",
+          outcomes: [
+            "Explain what each core object is for",
+            "Debug a failing deployment methodically",
+            "Read cluster events like a log",
+          ],
+          skills: [
+            { n: "Objects", ls: [71, 72] },
+            { n: "Debugging", ls: [73] },
+          ],
+          lessons: [
+            {
+              id: 71,
+              sec: "Objects",
+              t: "Pods, deployments, services",
+              min: 19,
+              kind: "Read",
+            },
+            {
+              id: 72,
+              sec: "Objects",
+              t: "Config, secrets and volumes",
+              min: 17,
+              kind: "Read",
+            },
+            {
+              id: 73,
+              sec: "When it breaks",
+              t: "Why is my pod pending",
+              min: 21,
+              kind: "Exercise",
+            },
+          ],
+        },
+
+        {
+          id: 8,
+          t: "Product photography with one light",
+          by: "Grace Wambui",
+          cat: "Creative",
+          level: "Beginner",
+          price: 2800,
+          rating: 4.7,
+          learners: "4,090",
+          art: 7,
+          blurb:
+            "Shoot clean product images on a table at home, with one light source and things you already own.",
+          outcomes: [
+            "Control a single light and its shadow",
+            "Build a seamless background cheaply",
+            "Edit consistently across a set",
+          ],
+          skills: [
+            { n: "Lighting", ls: [81, 82] },
+            { n: "Editing", ls: [83] },
+          ],
+          lessons: [
+            {
+              id: 81,
+              sec: "Light",
+              t: "One light, three positions",
+              min: 13,
+              kind: "Read",
+            },
+            {
+              id: 82,
+              sec: "Light",
+              t: "Softening and blocking",
+              min: 11,
+              kind: "Exercise",
+            },
+            {
+              id: 83,
+              sec: "After",
+              t: "Editing a set so it matches",
+              min: 15,
+              kind: "Read",
+            },
+          ],
+        },
+      ];
+
+      /* Enrolment holds the pace. Everything downstream is measured against it */
+      const ENROLL = {
+        1: {
+          pace: 60,
+          weeks: 1,
+          done: [1, 2, 3, 4, 5, 6],
+          skills: ["Reading a query", "Filtering and sorting"],
+        },
+        4: { pace: 30, weeks: 1, done: [41, 42], skills: ["Structure"] },
+        6: {
+          pace: 30,
+          weeks: 1,
+          done: [61, 62, 63],
+          skills: ["Structure", "Editing"],
+        },
+      };
+
+      const PACES = [
+        [30, "Half an hour"],
+        [60, "An hour"],
+        [90, "An hour and a half"],
+        [180, "Three hours"],
+      ];
+
+      /* Course art */
+      const PAL = [
+        ["#1F5F4E", "#3DDC97"],
+        ["#2A3F6E", "#7FA8F0"],
+        ["#5E2A56", "#E07FD0"],
+        ["#5E4A1E", "#F2B33D"],
+        ["#1E4F5E", "#5FD0E0"],
+        ["#4A2A2A", "#E08A6B"],
+        ["#2E3A2A", "#9FD070"],
+        ["#3A2A5E", "#A48AE0"],
+      ];
+      function art(i) {
+        const [bg, fg] = PAL[i % PAL.length],
+          m = i % 4;
+        const shapes = [
+          `<g stroke="${fg}" stroke-width="2.5" fill="none"><path d="M10 70h80M10 52h80M10 34h80"/><path d="M28 24v56M52 24v56M76 24v56"/></g>`,
+          `<path d="M6 76q22-52 44-26t44-30" stroke="${fg}" stroke-width="4" fill="none"/><circle cx="50" cy="50" r="6" fill="${fg}"/>`,
+          `<g fill="${fg}"><rect x="14" y="54" width="14" height="26" rx="3"/><rect x="34" y="40" width="14" height="40" rx="3"/><rect x="54" y="28" width="14" height="52" rx="3"/><rect x="74" y="46" width="14" height="34" rx="3"/></g>`,
+          `<g fill="none" stroke="${fg}" stroke-width="2.5"><circle cx="34" cy="38" r="12"/><circle cx="66" cy="38" r="12"/><circle cx="50" cy="66" r="12"/><path d="M40 46l6 10M60 46l-6 10M46 38h8"/></g>`,
+        ][m];
+        return `<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
+  <rect width="100" height="100" fill="${bg}"/>${shapes}</svg>`;
+      }
+
+      /* State */
+      const state = {
+        screen: "home",
+        course: null,
+        lesson: null,
+        from: "home",
+        cat: null,
+        query: "",
+        timefit: null,
+        pace: 90,
+        answered: null,
+        enroll: { ...ENROLL },
+      };
+
+      const view = document.getElementById("view"),
+        tabs = document.getElementById("tabs"),
+        toast = document.getElementById("toast");
+      const esc = (s) =>
+        String(s).replace(
+          /[&<>"]/g,
+          (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c],
+        );
+      const course = (id) => COURSES.find((c) => c.id === id);
+      const lessonOf = (c, id) => c.lessons.find((l) => l.id === id);
+      const isEnrolled = (id) => !!state.enroll[id];
+      const ksh = (n) => (n ? "KSh " + n.toLocaleString() : "Free");
+
+      const totalMin = (c) => c.lessons.reduce((a, l) => a + l.min, 0);
+      const doneMin = (c) => {
+        const e = state.enroll[c.id];
+        return e
+          ? c.lessons
+              .filter((l) => e.done.includes(l.id))
+              .reduce((a, l) => a + l.min, 0)
+          : 0;
+      };
+      const pct = (c) => Math.round((doneMin(c) / totalMin(c)) * 100);
+      const nextLesson = (c) => {
+        const e = state.enroll[c.id];
+        return c.lessons.find((l) => !e.done.includes(l.id)) || null;
+      };
+
+      /* Pace maths. Expected minutes by now against actual */
+      function pace(c) {
+        const e = state.enroll[c.id];
+        if (!e) return null;
+        const expected = e.pace * e.weeks,
+          actual = doneMin(c),
+          diff = actual - expected;
+        const remaining = totalMin(c) - actual,
+          weeksLeft = Math.max(1, Math.ceil(remaining / e.pace));
+        const d = new Date(2026, 8, 22);
+        d.setDate(d.getDate() + weeksLeft * 7);
+        const finish = d.toLocaleDateString("en-GB", {
+          day: "numeric",
+          month: "long",
+        });
+        return {
+          expected,
+          actual,
+          diff,
+          remaining,
+          weeksLeft,
+          finish,
+          state: diff >= 0 ? "on" : diff > -45 ? "slightly" : "behind",
+        };
+      }
+      function finishFrom(minPerWeek, total) {
+        const weeks = Math.max(1, Math.ceil(total / minPerWeek));
+        const d = new Date(2026, 8, 22);
+        d.setDate(d.getDate() + weeks * 7);
+        return {
+          weeks,
+          date: d.toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+          }),
+        };
+      }
+      const skillDone = (c, s) => {
+        const e = state.enroll[c.id];
+        return e ? s.ls.every((id) => e.done.includes(id)) : false;
+      };
+
+      const ICO = {
+        home: `<path d="m4 11 8-6 8 6v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/>`,
+        grid: `<rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/>`,
+        chart: `<path d="M4 19V10M10 19V5M16 19v-6M22 19H2"/>`,
+        user: `<circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-5.5 7-5.5s7 1.9 7 5.5"/>`,
+        search: `<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>`,
+        back: `<path d="m14 6-6 6 6 6"/>`,
+        close: `<path d="M7 7l10 10M17 7L7 17"/>`,
+      };
+
+      function go(s, opt = {}) {
+        if (s === "course") state.course = opt.id;
+        if (s === "lesson") {
+          state.course = opt.c;
+          state.lesson = opt.id;
+          state.answered = null;
+        }
+        if (opt.from) state.from = opt.from;
+        state.screen = s;
+        render();
+        view.scrollTop = 0;
+      }
+      let tt;
+      function say(m) {
+        toast.textContent = m;
+        toast.classList.add("show");
+        clearTimeout(tt);
+        tt = setTimeout(() => toast.classList.remove("show"), 1900);
+      }
+
+      function complete(cid, lid) {
+        const e = state.enroll[cid];
+        if (!e.done.includes(lid)) e.done.push(lid);
+        const c = course(cid);
+        const skill = c.skills.find(
+          (s) => s.ls.includes(lid) && s.ls.every((x) => e.done.includes(x)),
+        );
+        const nxt = nextLesson(c);
+        if (skill && !e.skills.includes(skill.n)) {
+          e.skills.push(skill.n);
+          say("Skill marked: " + skill.n);
+        } else say("Lesson complete");
+        if (nxt) go("lesson", { c: cid, id: nxt.id });
+        else go("course", { id: cid });
+      }
+      function enrol(cid) {
+        state.enroll[cid] = {
+          pace: state.pace,
+          weeks: 0,
+          done: [],
+          skills: [],
+        };
+        const c = course(cid);
+        say("Enrolled. First lesson is ready");
+        go("lesson", { c: cid, id: c.lessons[0].id });
+      }
+
+      /* Components */
+      const courseCard = (c) => `
+ <button class="ccard" onclick="go('course',{id:${c.id}})">
+   <span class="art">${art(c.art)}</span>
+   <span class="cat">${c.cat.toUpperCase()}</span>
+   <b>${esc(c.t)}</b>
+   <span>${c.lessons.length} lessons, ${Math.round(totalMin(c) / 60)}h ${c.price ? "" : ", free"}</span>
+ </button>`;
+
+      const courseRow = (c) => `
+ <button class="clist" onclick="go('course',{id:${c.id}})">
+   <span class="art">${art(c.art)}</span>
+   <span class="t">
+     <b>${esc(c.t)}</b>
+     <span>${esc(c.by)} &middot; ${c.level} &middot; ${Math.round(totalMin(c) / 60)}h</span>
+     <span style="margin-top:4px;color:${c.price ? "var(--text-2)" : "var(--green)"};font-weight:700">${ksh(c.price)}</span>
+   </span>
+ </button>`;
+
+      const lessonRow = (c, l) => {
+        const e = state.enroll[c.id],
+          done = e && e.done.includes(l.id),
+          now = e && nextLesson(c) && nextLesson(c).id === l.id;
+        return `<button class="lrow" onclick="${e ? `go('lesson',{c:${c.id},id:${l.id}})` : `say('Enrol to open lessons')`}">
+   <span class="st" data-done="${!!done}" data-now="${!!now}"></span>
+   <span class="t"><b>${esc(l.t)}</b><span>${l.kind}${now ? " &middot; up next" : ""}</span></span>
+   <span class="min">${l.min} min</span>
+ </button>`;
+      };
+
+      /* Screens */
+      function home() {
+        const enrolled = COURSES.filter((c) => isEnrolled(c.id));
+        const live = enrolled
+          .filter((c) => nextLesson(c))
+          .map((c) => ({ c, p: pace(c) }))
+          .sort((a, b) => a.p.diff - b.p.diff);
+        if (!live.length)
+          return `
+   <div class="head"><div><div class="sub">${TODAY}</div><h1>All caught up</h1></div></div>
+   <div class="empty" style="padding-top:70px"><h3>Every course finished</h3>
+     <p>You have completed everything you enrolled in. Time to pick the next one.</p>
+     <button class="btn" style="display:inline-flex;flex:none;padding:13px 24px" onclick="go('browse')">Browse courses</button></div>`;
+        const c = live[0].c,
+          p = live[0].p,
+          nxt = nextLesson(c);
+        const tone =
+          p.state === "on"
+            ? ["var(--green)", "On pace"]
+            : p.state === "slightly"
+              ? ["var(--amber)", "Slightly behind"]
+              : ["var(--amber)", "Behind pace"];
+
+        const fits = enrolled
+          .map((x) => nextLesson(x))
+          .filter(Boolean)
+          .filter((l) => !state.timefit || l.min <= state.timefit);
+
+        return `
+ <div class="head">
+   <div><div class="sub">${TODAY}</div><h1>Pick up where you left off</h1></div>
+   <button class="icobtn" aria-label="Browse courses" onclick="go('browse')"><svg viewBox="0 0 24 24">${ICO.search}</svg></button>
+ </div>
+
+ <div class="cont">
+   <div class="top">
+     <div style="min-width:0">
+       <span class="course">${esc(c.t)}</span>
+       <h2>${esc(nxt.t)}</h2>
+       <div class="meta">${nxt.kind}, ${nxt.min} minutes</div>
+     </div>
+     <span class="pacetag" style="background:${tone[0]};color:#06221A">${tone[1]}</span>
+   </div>
+   <div class="progline"><i style="width:${pct(c)}%"></i></div>
+   <div class="proglab"><span>${state.enroll[c.id].skills.length} of ${c.skills.length} skills</span><span>${p.finish}</span></div>
+   <div class="go">
+     <button class="btn" onclick="go('lesson',{c:${c.id},id:${nxt.id}})">Continue<span class="r">${nxt.min} min</span></button>
+     <button class="btn ghost" onclick="go('course',{id:${c.id}})">Syllabus</button>
+   </div>
+ </div>
+
+ <div class="fit">
+   <div class="lab">How long have you got?</div>
+   <div class="chips">
+     ${[
+       [15, "15 min"],
+       [30, "30 min"],
+       [45, "45 min"],
+     ]
+       .map(
+         (t) => `<button class="chip" aria-pressed="${state.timefit === t[0]}"
+       onclick="state.timefit = state.timefit===${t[0]} ? null : ${t[0]}; render()">${t[1]}</button>`,
+       )
+       .join("")}
+     ${state.timefit ? `<button class="chip" onclick="state.timefit=null;render()">Clear</button>` : ""}
+   </div>
+ </div>
+
+ ${
+   state.timefit
+     ? `
+   <div class="sec"><h2>Fits in ${state.timefit} minutes</h2><span>${fits.length} lessons</span></div>
+   ${
+     fits.length
+       ? fits
+           .map((l) => {
+             const pc = COURSES.find((x) => x.lessons.includes(l));
+             return lessonRow(pc, l);
+           })
+           .join("")
+       : `<div class="empty"><h3>Nothing that short</h3><p>Your next lessons are all longer than ${state.timefit} minutes. Try 25, or read the syllabus instead.</p></div>`
+   }`
+     : `
+   <div class="sec"><h2>Your courses</h2><span>${enrolled.length} enrolled</span></div>
+   ${enrolled
+     .map((x) => {
+       const p2 = pace(x);
+       return `
+     <button class="enrolled" onclick="go('course',{id:${x.id}})">
+       <span class="r1">
+         <span class="art">${art(x.art)}</span>
+         <span style="flex:1;min-width:0"><b>${esc(x.t)}</b>
+           <span class="sub">${state.enroll[x.id].skills.length} of ${x.skills.length} skills &middot; ${p2.finish}</span></span>
+       </span>
+       <span class="bar"><i style="width:${pct(x)}%;background:${p2.state === "on" ? "var(--green)" : "var(--amber)"}"></i></span>
+       <span class="foot"><span>${pct(x)}% of lessons</span><span style="color:${p2.state === "on" ? "var(--green)" : "var(--amber)"}">
+         ${p2.state === "on" ? "On pace" : Math.round(Math.abs(p2.diff)) + " min behind"}</span></span>
+     </button>`;
+     })
+     .join("")}
+
+   <div class="sec"><h2>Recommended for you</h2><button onclick="go('browse')">See all</button></div>
+   <div class="crail">${COURSES.filter((x) => !isEnrolled(x.id))
+     .slice(0, 4)
+     .map(courseCard)
+     .join("")}</div>`
+ }
+ <div style="height:20px"></div>`;
+      }
+
+      function browse() {
+        const q = state.query.trim().toLowerCase();
+        const list = COURSES.filter(
+          (c) =>
+            (!state.cat || c.cat === state.cat) &&
+            (!q || (c.t + " " + c.by + " " + c.cat).toLowerCase().includes(q)),
+        );
+        return `
+ <div class="head"><div><div class="sub">${COURSES.length} courses</div><h1>Browse</h1></div></div>
+ <div style="padding:12px 20px 0">
+   <div style="display:flex;align-items:center;gap:10px;background:var(--surface);border-radius:var(--r-md);padding:0 13px">
+     <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:var(--text-2);fill:none;stroke-width:2.2;flex:none">${ICO.search}</svg>
+     <input id="q" type="search" placeholder="Course, topic or teacher" value="${esc(state.query)}" aria-label="Search courses"
+       style="flex:1;background:none;border:0;outline:0;font:inherit;font-size:16px;padding:13px 0;color:var(--text);min-width:0"
+       oninput="state.query=this.value;render();const el=document.getElementById('q');el.focus();el.setSelectionRange(el.value.length,el.value.length)">
+   </div>
+ </div>
+ <div style="height:14px"></div>
+ <div class="chips">
+   ${CATS.map(
+     (c) => `<button class="chip" aria-pressed="${state.cat === c}"
+     onclick="state.cat = state.cat==='${c}' ? null : '${c}'; render()">${c}</button>`,
+   ).join("")}
+ </div>
+ <div class="sec"><h2>${state.cat || (q ? "Results" : "All courses")}</h2><span>${list.length}</span></div>
+ ${
+   list.length
+     ? list.map(courseRow).join("")
+     : `<div class="empty"><h3>Nothing here yet</h3><p>No courses match. Clear the filter or try a broader word.</p>
+    <button class="btn" style="display:inline-flex;flex:none;padding:13px 24px" onclick="state.cat=null;state.query='';render()">Clear</button></div>`
+ }
+ <div style="height:20px"></div>`;
+      }
+
+      function detail() {
+        const c = course(state.course),
+          e = state.enroll[c.id];
+        const secs = [...new Set(c.lessons.map((l) => l.sec))];
+        const p = e ? pace(c) : null;
+        return `
+ <div class="hero">${art(c.art)}
+   <div class="topbar"><button class="rnd" aria-label="Back" onclick="go('${state.from === "lesson" ? "home" : state.from}')">
+     <svg viewBox="0 0 24 24">${ICO.back}</svg></button></div>
+ </div>
+ <div class="dhead">
+   <span class="cat">${c.cat.toUpperCase()} &middot; ${c.level.toUpperCase()}</span>
+   <h1>${esc(c.t)}</h1>
+   <div class="by">${esc(c.by)} &middot; ${c.rating} stars &middot; ${c.learners} learners</div>
+ </div>
+ <dl class="statrow">
+   <div><dt>Lessons</dt><dd>${c.lessons.length}</dd></div>
+   <div><dt>Total time</dt><dd>${Math.round(totalMin(c) / 60)}h</dd></div>
+   <div><dt>Price</dt><dd style="color:${c.price ? "var(--text)" : "var(--green)"}">${ksh(c.price)}</dd></div>
+ </dl>
+
+ ${
+   e
+     ? `<div class="finish" style="margin-top:0">
+   <b>YOU ARE ENROLLED</b>
+   <h3>${e.skills.length} of ${c.skills.length} skills, finishing ${p.finish}</h3>
+   <p>${
+     p.state === "on"
+       ? "You are on the pace you set at " + e.pace + " minutes a week."
+       : "You set " +
+         e.pace +
+         " minutes a week and are about " +
+         Math.round(Math.abs(p.diff)) +
+         " minutes behind. Either catch up or change the pace, both are fine."
+   }</p>
+ </div>`
+     : ""
+ }
+
+ <div class="sec"><h2>What you will be able to do</h2></div>
+ <div class="out">${c.outcomes.map((o) => `<div><span class="tick"></span><span>${esc(o)}</span></div>`).join("")}</div>
+
+ <div class="sec"><h2>About</h2></div>
+ <div style="padding:0 20px;font-size:14.5px;line-height:1.6;color:var(--text-2)">${esc(c.blurb)}</div>
+
+ <div class="sec"><h2>Skills in this course</h2><span>${c.skills.length}</span></div>
+ <div style="padding:0 20px">
+   ${c.skills
+     .map(
+       (
+         s,
+       ) => `<div class="skill"><span class="pip" data-on="${skillDone(c, s)}"></span>
+     <span>${esc(s.n)}</span><em>${s.ls.length} lesson${s.ls.length > 1 ? "s" : ""}</em></div>`,
+     )
+     .join("")}
+ </div>
+
+ <div class="sec"><h2>Syllabus</h2><span>${secs.length} sections</span></div>
+ ${secs
+   .map(
+     (s) => `
+   <div style="padding:14px 20px 4px;font-size:12px;font-weight:700;color:var(--text-2)">${esc(s.toUpperCase())}</div>
+   ${c.lessons
+     .filter((l) => l.sec === s)
+     .map((l) => lessonRow(c, l))
+     .join("")}`,
+   )
+   .join("")}
+ <div style="height:14px"></div>
+
+ <div style="position:sticky;bottom:0;background:var(--base);border-top:1px solid var(--line);padding:12px 20px 16px;display:flex;gap:10px">
+   ${
+     e
+       ? `<button class="btn" onclick="const n=nextLesson(course(${c.id}));n?go('lesson',{c:${c.id},id:n.id}):say('Course finished')">
+         ${e.done.length ? "Continue" : "Start first lesson"}</button>`
+       : `<button class="btn" onclick="go('enrol')">Enrol<span class="r">${ksh(c.price)}</span></button>`
+   }
+ </div>`;
+      }
+
+      function enrol_screen() {
+        const c = course(state.course),
+          total = totalMin(c),
+          f = finishFrom(state.pace, total);
+        return `
+ <div class="head">
+   <div><div class="sub">Enrolling</div><h1>Set your pace</h1></div>
+   <button class="icobtn" aria-label="Back" onclick="go('course',{id:${c.id}})"><svg viewBox="0 0 24 24">${ICO.back}</svg></button>
+ </div>
+ <div style="padding:6px 20px 0;font-size:14.5px;line-height:1.55;color:var(--text-2)">
+   ${esc(c.t)} is ${Math.round(total / 60)} hours of lessons. How much time can you give it in a normal week? You can change this later.
+ </div>
+ <div class="sec"><h2>Time each week</h2></div>
+ <div class="pace">
+   ${PACES.map((p) => {
+     const fp = finishFrom(p[0], total);
+     return `
+     <button class="paceopt" onclick="state.pace=${p[0]};render()">
+       <span class="l"><b>${p[1]}</b><span>Finishes in ${fp.weeks} week${fp.weeks > 1 ? "s" : ""}, around ${fp.date}</span></span>
+       <span class="radio" data-on="${state.pace === p[0]}"></span>
+     </button>`;
+   }).join("")}
+ </div>
+ <div class="finish">
+   <b>YOUR PLAN</b>
+   <h3>Done by ${f.date}</h3>
+   <p>At ${state.pace} minutes a week, that is roughly ${Math.round(state.pace / (state.pace >= 90 ? 3 : 2))} minutes a sitting, two or three times a week. We will tell you when you slip behind, and never nag you on a day you have already studied.</p>
+ </div>
+ ${
+   c.price
+     ? `
+ <div class="sec"><h2>Payment</h2></div>
+ <div class="pace">
+   <div class="paceopt" style="border-top:0"><span class="l"><b>M-Pesa</b><span>Prompt sent to 07xx xxx 418</span></span>
+     <span class="radio" data-on="true"></span></div>
+ </div>`
+     : ""
+ }
+ <div style="height:14px"></div>
+ <div style="position:sticky;bottom:0;background:var(--base);border-top:1px solid var(--line);padding:12px 20px 16px;display:flex;gap:10px">
+   <button class="btn" onclick="enrol(${c.id})">${c.price ? "Pay and start" : "Start learning"}<span class="r">${ksh(c.price)}</span></button>
+ </div>`;
+      }
+
+      function lesson() {
+        const c = course(state.course),
+          l = lessonOf(c, state.lesson);
+        const idx = c.lessons.indexOf(l),
+          e = state.enroll[c.id];
+        const body = l.body || [
+          `This lesson covers ${l.t.toLowerCase()}. Full written content for every course is beyond the scope of this prototype, but the reading view, the progress meter and the end of lesson check all behave exactly as they do in the lessons that are written out.`,
+          `Open the first course, <strong>SQL for people who already use spreadsheets</strong>, to read eleven complete lessons with four checks between them.`,
+        ];
+        const prog = Math.round(((idx + 1) / c.lessons.length) * 100);
+        const ans = state.answered;
+
+        return `
+ <div class="reader">
+   <div class="rtop">
+     <button class="x" aria-label="Close lesson" onclick="go('course',{id:${c.id},from:'home'})">
+       <svg viewBox="0 0 24 24">${ICO.close}</svg></button>
+     <span class="meter"><i><b style="width:${prog}%"></b></i>
+       <span>LESSON ${idx + 1} OF ${c.lessons.length} &middot; ${esc(c.t.toUpperCase())}</span></span>
+   </div>
+   <div class="rbody">
+     <div class="kind">${l.kind.toUpperCase()} &middot; ${l.min} MIN</div>
+     <h1>${esc(l.t)}</h1>
+     ${body.map((p) => `<p>${p}</p>`).join("")}
+     ${
+       l.check
+         ? `
+       <div class="check">
+         <div class="lab">QUICK CHECK</div>
+         <h3>${esc(l.check.q)}</h3>
+         ${l.check.a
+           .map(
+             (
+               a,
+               i,
+             ) => `<button data-state="${ans === null ? "" : i === l.check.right ? "right" : i === ans ? "wrong" : ""}"
+           onclick="state.answered=${i};render()">${esc(a)}</button>`,
+           )
+           .join("")}
+         ${ans !== null ? `<p class="verdict">${ans === l.check.right ? "Correct. " : "Not quite. "}${esc(l.check.why)}</p>` : ""}
+       </div>`
+         : ""
+     }
+   </div>
+   <div class="rfoot">
+     ${
+       l.check && ans === null
+         ? `<button class="btn ghost wide" onclick="say('Answer the check to finish this lesson')">Answer the check to continue</button>`
+         : `<button class="btn wide" onclick="complete(${c.id},${l.id})">
+            ${e.done.includes(l.id) ? "Next lesson" : "Mark complete and continue"}</button>`
+     }
+   </div>
+ </div>`;
+      }
+
+      function progress() {
+        const enrolled = COURSES.filter((c) => isEnrolled(c.id));
+        if (!enrolled.length)
+          return `
+   <div class="head"><div><div class="sub">Nothing yet</div><h1>Progress</h1></div></div>
+   <div class="empty" style="padding-top:80px"><h3>No courses yet</h3>
+     <p>Once you enrol, this is where your skills and pace live.</p>
+     <button class="btn" style="display:inline-flex;flex:none;padding:13px 24px" onclick="go('browse')">Browse courses</button></div>`;
+
+        const skills = enrolled.reduce(
+          (a, c) => a + state.enroll[c.id].skills.length,
+          0,
+        );
+        const allSkills = enrolled.reduce((a, c) => a + c.skills.length, 0);
+        const mins = enrolled.reduce((a, c) => a + doneMin(c), 0);
+        const weekly = [45, 90, 60, 120, 75, 95, 40];
+
+        return `
+ <div class="head"><div><div class="sub">Across ${enrolled.length} courses</div><h1>Progress</h1></div></div>
+ <dl class="bigstats">
+   <div><dt>Skills</dt><dd>${skills}</dd></div>
+   <div><dt>Hours</dt><dd>${Math.round(mins / 60)}</dd></div>
+   <div><dt>Lessons</dt><dd>${enrolled.reduce((a, c) => a + state.enroll[c.id].done.length, 0)}</dd></div>
+ </dl>
+ <div style="padding:14px 20px 0;color:var(--text-2);font-size:13.5px;line-height:1.55">
+   ${skills} of ${allSkills} skills demonstrated. A skill only counts once you have passed the check at the end of the lessons that teach it.
+ </div>
+
+ <div class="sec"><h2>Minutes a week</h2><span>Last 7 weeks</span></div>
+ <div class="weeks">
+   ${weekly
+     .map(
+       (
+         w,
+         i,
+       ) => `<div><i class="${w >= 60 ? "on" : ""}" style="height:${Math.round((w / 120) * 88)}%"></i>
+     <b>${i === weekly.length - 1 ? "Now" : "W" + (i + 1)}</b></div>`,
+     )
+     .join("")}
+ </div>
+ <div style="padding:12px 20px 0;color:var(--text-2);font-size:12.5px;line-height:1.5">
+   Green weeks are the ones where you hit the pace you set. Four of the last seven.
+ </div>
+
+ <div class="sec"><h2>Skills by course</h2></div>
+ ${enrolled
+   .map(
+     (c) => `
+   <div class="skillcard">
+     <div class="r1"><b>${esc(c.t)}</b><span class="n">${state.enroll[c.id].skills.length}/${c.skills.length}</span></div>
+     ${c.skills
+       .map(
+         (
+           s,
+         ) => `<div class="skill"><span class="pip" data-on="${skillDone(c, s)}"></span>
+       <span>${esc(s.n)}</span><em>${skillDone(c, s) ? "Demonstrated" : "In progress"}</em></div>`,
+       )
+       .join("")}
+   </div>`,
+   )
+   .join("")}
+ <div style="height:20px"></div>`;
+      }
+
+      function me() {
+        return `
+ <div class="head"><div><div class="sub">Amani Wekesa</div><h1>Profile</h1></div></div>
+ <div style="padding:16px 20px 0">
+   ${[
+     [
+       "Weekly pace reminder",
+       "Once a week, on the day you usually study.",
+       "On",
+     ],
+     ["Change my pace", "Applies to all enrolled courses.", "90 min"],
+     ["Downloads", "Keep lessons available offline.", "Wi-Fi only"],
+     [
+       "Certificates",
+       "Issued when every skill in a course is demonstrated.",
+       "1 earned",
+     ],
+   ]
+     .map(
+       (r) => `
+     <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 0;border-top:1px solid var(--line)">
+       <span><b style="display:block;font-size:15px;font-weight:700;margin-bottom:2px">${r[0]}</b>
+         <span style="font-size:12.5px;color:var(--text-2)">${r[1]}</span></span>
+       <span style="font-size:13.5px;color:var(--text-2);font-weight:600;flex:none">${r[2]}</span>
+     </div>`,
+     )
+     .join("")}
+ </div>
+ <div class="sec"><h2>Finished</h2><span>1 course</span></div>
+ ${courseRow(COURSES[5])}
+ <div style="height:20px"></div>`;
+      }
+
+      /* Render */
+      const SCREENS = {
+        home,
+        browse,
+        course: detail,
+        enrol: enrol_screen,
+        lesson,
+        progress,
+        me,
+      };
+      const TABS = [
+        { id: "home", l: "Learn", i: ICO.home },
+        { id: "browse", l: "Browse", i: ICO.grid },
+        { id: "progress", l: "Progress", i: ICO.chart },
+        { id: "me", l: "Profile", i: ICO.user },
+      ];
+
+      function render() {
+        view.innerHTML = SCREENS[state.screen]();
+        const hide = ["lesson", "enrol"].includes(state.screen);
+        tabs.style.display = hide ? "none" : "grid";
+        const active =
+          { course: "home", enrol: "browse", lesson: "home" }[state.screen] ||
+          state.screen;
+        tabs.innerHTML = TABS.map(
+          (
+            t,
+          ) => `<button class="tab" role="tab" aria-selected="${active === t.id}" onclick="go('${t.id}')">
+   <svg viewBox="0 0 24 24">${t.i}</svg>${t.l}</button>`,
+        ).join("");
+      }
+      render();
+    </script>
+  </body>
+</html>
